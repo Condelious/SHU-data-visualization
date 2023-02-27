@@ -44,11 +44,23 @@ var mapoption = {
             trigger: 'item'
         },
         
+        
         visualMap: {
             type: 'piecewise',
             show: true,
             pieces: [
-                {min:70000.1},
+                {min:5000000000000,max:100000000000000},
+                {min:1000000000000,max:50000000000000},
+                {min:500000000000,max:10000000000000},
+                {min:100000000000,max:5000000000000},
+                {min:50000000000,max:1000000000000},
+                {min:20000000000,max:500000000000},
+                {min:10000000000,max:20000000000},
+                {min:5000000000,max:10000000000},
+                {min:1000000000,max:5000000000},
+                {min:500000001,max:1000000000},
+                {min:100000000,max:500000000},
+                {min:70000.1,max:300000},
                 { min: 60000.1,max:70000},
                 { min: 50000.1,max:60000},
                 { min: 40000.1, max: 50000 },
@@ -70,40 +82,18 @@ var mapoption = {
                 { max: 50 }
             ],
             text: "",
-            x: 'left',
+            x: 'right',
             y: 'bottom',
             calculable: true,
             inRange: {
-                color: ['#fffea2', '#ffae70', '#ff726f', '#aa4b49', '#420000'],
+                color: ['#fffea2', '#ffae70', '#ff726f', '#aa4b49', '#420000','#aacee2',"#65a8c4","#004159"],
             },
         },
         timeline: {
             show: true,
             axisType: 'category',
             data: 
-            ['1990', 
-            '2000', 
-            '2001', 
-            '2002', 
-            '2003',
-            '2004',
-            '2005',
-            '2006',
-            '2007',
-            '2008',
-            '2009',
-            '2010',
-            '2011',
-            '2012',
-            '2013',
-            '2014',
-            '2015',
-            '2016',
-            '2017',
-            '2018',
-            '2019',
-            '2020',
-            '2021']
+            ['1990','1991','1992','1993','1994','1995','1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021']
         },
         series: [
             {
@@ -112,6 +102,8 @@ var mapoption = {
                 map: 'world',
                 nameMap: nameMap,
                 roam: true,
+                x: 'rightt',
+                y: 'bottom',
                 label: {
                     normal: {
                         show: false
@@ -122,6 +114,8 @@ var mapoption = {
                     }
                 },
                 showLegendSymbol: false
+
+                
             },
             {
                 name: 'GDPPC',
@@ -129,6 +123,8 @@ var mapoption = {
                 map: 'world',
                 nameMap: nameMap,
                 roam: true,
+                x: 'rightt',
+                y: 'bottom',
                 label: {
                     normal: {
                         show: false
